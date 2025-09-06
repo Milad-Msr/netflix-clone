@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 
 @layer base {
   body {
-    @apply bg-black text-white
+    @apply bg-black text-white font-[Roboto]
   }
 }
 
@@ -11,4 +12,47 @@
   .icons {
     @apply w-[20px] cursor-pointer
   }
+
+  .btn {
+    @apply outline-0 py-[8px] px-5 inline-flex items-center gap-2.5 text-[15px] 
+    font-semibold bg-white rounded-[4px] text-black cursor-pointer hover:bg-[#ffffffbf] transition-all
+  }
+}
+
+
+.nav-profile {
+  position: relative;
+}
+
+.navbar .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background-color: #191919;
+  padding: 18px 22px;
+  border-radius: 2px;
+  text-decoration: underline;
+  z-index: 1;
+  display: none;
+  transition: 300ms linear ;
+}
+
+
+.navbar .dropdown p {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.nav-profile:hover .dropdown {
+  display: block;
+}
+
+.banner-img {
+  mask-image: linear-gradient(to right, transparent, black 75%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
 }
