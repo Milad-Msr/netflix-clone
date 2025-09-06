@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+
+@layer base {
+  body {
+    @apply bg-black text-white
+  }
+}
+
+@layer components {
+  .icons {
+    @apply w-[20px] cursor-pointer
+  }
+}
